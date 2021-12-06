@@ -11,6 +11,8 @@ import IndexUsuarios from 'pages/usuarios/Index';
 import './styles/globals.css';
 import 'styles/tabla.css';
 import EditarUsuario from 'pages/usuarios/Editar';
+import AuthLayout from 'layouts/AuthLayout';
+import Register from 'pages/auth/registro';
 
 // const httpLink = createHttpLink({
 //   uri: "https://server-back-workbot.herokuapp.com/graphql"
@@ -33,6 +35,9 @@ function App() {
             <Route path='page2' element={<Page2 />} />
             <Route path='category1' element={<IndexCategory1 />} />
             <Route path='category1/page1' element={<Category1 />} />
+          </Route>
+          <Route path="/auth" element={<AuthLayout/>}>
+            <Route path='register' element={<Register/>} />
           </Route>
         </Routes>
       </BrowserRouter>
